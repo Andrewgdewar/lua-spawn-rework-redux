@@ -1,0 +1,15 @@
+{
+	"name": "SpawnRework",
+	"author": "Lua",
+	"version": "2.1.8",
+	"akiVersion": "3.3.0",
+	"license": "CC BY-NC-SA 4.0",
+	"main": "src/mod.js",
+    "scripts": {
+        "setup:environment": "npm i",
+        "build:unzipped": "copyfiles -e \"./node_modules/**/*.*\" -e \"./dist/**/*.*\" -e \"./package-lock.json\" -e \"./tsconfig.json\" -e \"./README.txt\" -e \"./mod.code-workspace\" \"./**/*.*\" ./dist",
+        "zip:files": "cd dist/ && bestzip ../mod.zip *",
+        "build:zip": "npm run clean:environment && npm run build:unzipped && npm run zip:files",
+        "clean:environment": "node -e \"require('fs').rm('mod.zip', ()=>{})\" && node -e \"require('fs').rmdir('./dist/',{recursive:true},()=>{})\""
+    }
+}

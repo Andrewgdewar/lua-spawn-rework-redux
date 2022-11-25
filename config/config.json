@@ -1,0 +1,29 @@
+{
+	"Enabled": false,
+
+    "default_pattern": "Lua-Default",
+	"use_random_patterns": false,
+	"random_patterns": {
+		"Lua-Default": 69,
+		"YOUR-PATTERN-FILE-NAME-IN-HERE-1": 1,
+		"YOUR-PATTERN-FILE-NAME-IN-HERE-2": 1,
+		"YOUR-PATTERN-FILE-NAME-IN-HERE-3": 1
+	},
+
+	"UseDefaultSpawns":
+	{
+		"Bosses": false,
+		"Waves": false,
+		"TriggeredWaves": true,
+
+		"__COMMENT": "If you want to edit Default Spawns, Edit base.json (BossLocationSpawn | Waves) in: /Aki_Data/Server/templates/database/locations/%MAP_NAME%/base.json"
+	},
+	"UsePatternSpawns":
+	{
+		"Bosses": true,
+		"Waves": true,
+		"TriggeredWaves": true
+	},
+
+	"__DEBUG__Generate_bots_on_start": false
+}
